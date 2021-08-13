@@ -69,7 +69,7 @@ Find out more at [Google Fonts](https://fonts.google.com/)
 
 # Compile
 
-	pdflatex -synctex=1 -interaction=nonstopmode -output-directory out %.tex
+	mkdir -p out; lualatex main.tex -output-directory out
 
 # Format
 
