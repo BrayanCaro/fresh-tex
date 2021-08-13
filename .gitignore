@@ -1,0 +1,12 @@
+# pdflatex
+/out
+*.aux
+*.nav
+*.pdf
+*.snm
+*.gz
+*.toc
+
+# identation
+*.bak
+*.log

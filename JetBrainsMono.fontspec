@@ -1,0 +1,9 @@
+\defaultfontfeatures[JetBrainsMono]{
+	Path= ./fonts/JetBrainsMono/,
+	Extension = .ttf,
+	UprightFont=*-Regular,
+	BoldFont=*-Bold,
+	ItalicFont=*-Italic,
+	BoldItalicFont=*-BoldItalic,
+	Scale=.85,
+}

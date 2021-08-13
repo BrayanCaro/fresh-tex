@@ -1,0 +1,9 @@
+modifyLineBreaks:
+    textWrapOptions:
+        columns: 120
+        huge: overflow
+        perCodeBlockBasis: 1
+        all:
+          except:
+            - align
+onlyOneBackUp: 1

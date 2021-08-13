@@ -1,0 +1,119 @@
+% !TeX program = lualatex
+\documentclass[12pt]{report}
+\usepackage[spanish]{babel}
+
+\usepackage[vmargin=2cm,hmargin=3cm]{geometry}
+
+% math
+%\usepackage{amsmath}
+
+% images
+%\usepackage{graphicx}
+%\graphicspath{ {./img/} }
+
+% fonts
+\usepackage[no-math]{fontspec}
+\setmonofont{JetBrainsMono}
+\setmainfont{Kanit}
+
+\usepackage{color,xcolor}
+
+% code
+\usepackage{listings}
+\definecolor{keyword}{HTML}{0033B3}
+\definecolor{string}{HTML}{067D17}
+\definecolor{class}{HTML}{008080}
+\definecolor{function-def}{HTML}{00627A}
+\lstset{
+	basicstyle=\ttfamily\small,
+	commentstyle=\color{gray},
+	breaklines,
+	gobble=8,
+	tabsize=4,
+	otherkeywords={1, 0},
+	keywordstyle=\color{keyword},
+	numberstyle=\ttfamily\scriptsize,
+	stringstyle=\color{string},
+	emph={GolombSequence},
+	emphstyle={\color{class}},
+	emph={[2]G,Main},
+	emphstyle={[2]\color{function-def}},
+	language=C++,
+}
+
+% draws
+%\usepackage{tikz}
+%\usetikzlibrary{babel} % solve the problem between arrows and babel package '>'
+
+% boxes
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\tcbsetforeverylayer{
+	enhanced,
+	frame hidden,
+	oversize,
+	left=10mm,
+	right=3cm,
+	arc=0mm,
+	boxrule=0mm,
+	beforeafter skip=0pt,
+	height fixed for=first and middle,
+	wrap box with/.style 2 args={
+		breakable,
+		before upper={\let\clearpage\relax},
+		colback=#1,
+		borderline west={2mm}{0mm}{#2},
+	}
+}
+\definecolor{fresh-green}{HTML}{e5fae1}
+\definecolor{dark-green}{HTML}{b1c2ae}
+\definecolor{fresh-purple}{HTML}{faeafc}
+\definecolor{dark-purple}{HTML}{bfa9b8}
+\newtcolorbox{bpurple}{
+	wrap box with={fresh-purple}{dark-purple}
+}
+\newtcolorbox{bgreen}{
+	after skip=1.5em,
+	wrap box with={fresh-green}{dark-green}
+}
+
+\title{Title}
+\author{Author}
+
+\usepackage{blindtext} % this is for testing only.
+
+
+\begin{document}
+\maketitle
+
+\begin{bpurple}
+	\blinddocument
+\end{bpurple}
+\begin{bgreen}
+	\blindmathpaper
+\end{bgreen}
+
+\begin{bpurple}
+	Ask
+\end{bpurple}
+\begin{bgreen}
+	Ans
+
+	\section{Code example}
+
+	\begin{lstlisting}
+		class GolombSequence {
+			static long G(long n) {
+				return n == 1 ? 1 : 1 + G(n - G(G(n - 1)));
+			}
+			
+			static void Main(string[] args) {
+				var
+				sum = Enumerable.Range(1, 100000000).Sum(i => G(i));
+				Console.WriteLine("https://jb.gg/correctNumberIs" + sum);
+			}
+		}
+	\end{lstlisting}
+\end{bgreen}
+
+\end{document}

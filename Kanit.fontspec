@@ -1,0 +1,8 @@
+\defaultfontfeatures[Kanit]{
+	Path= ./fonts/Kanit/,
+	Extension = .ttf,
+	UprightFont=*-Thin,
+	BoldFont=*-Light,
+	ItalicFont=*-ThinItalic,
+	BoldItalicFont=*-LightItalic,
+}
