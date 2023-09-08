@@ -1,11 +1,6 @@
 # pdflatex
 /out
-*.aux
-*.nav
-*.pdf
-*.snm
-*.gz
-*.toc
+/aux
 
 # identation
 *.bak

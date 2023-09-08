@@ -36,7 +36,7 @@
       ├── Montserrat-ThinItalic.ttf
       ├── Montserrat-Thin.ttf
       └── OFL.txt
-    ```
+   ```
 1. Create a file with the same font name that you've chosen in the root folder with the extension `.fontspec`. eg: `Monserrat.fontspec`
 1. Fill the content of `Monserrat.fontspec` with the following:
    ```tex
@@ -50,10 +50,8 @@
    }
    ```
 1. Finally, replace in `main.tex`: `\setmainfont{Kanit}` to `\setmainfont{Monserrat}` and it's ready to use! 😄
-   
 
-
-## Examples 
+## Examples
 
 Find out more at [Google Fonts](https://fonts.google.com/)
 
@@ -61,17 +59,14 @@ Find out more at [Google Fonts](https://fonts.google.com/)
 
 ![image](https://user-images.githubusercontent.com/41640423/129288409-fe38ef66-ce41-48e9-b37d-04ca4a517e07.png)
 
-
 ### JetBrains Mono
 
 ![image](https://user-images.githubusercontent.com/41640423/129288563-90c4b8e2-7f22-46db-90ba-575b1e03a43b.png)
 
-
 # Compile
 
-	mkdir -p out; lualatex main.tex -output-directory out
+    latexmk main -aux-directory=aux -output-directory=out
 
 # Format
 
-	 latexindent -m file.tex -w -l style.yaml -s
-
+    latexindent -m file.tex -w -l style.yaml -s
